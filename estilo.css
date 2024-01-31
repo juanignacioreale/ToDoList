@@ -1,0 +1,114 @@
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.navbar {
+    background-color: #333333 !important;
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar-toggler-icon {
+    background-color: #ffffff;
+}
+
+.nav-link {
+    align-items: center !important;
+    margin: 0 auto !important; /* Combine margin-right and margin-left into a single property */
+}
+
+.border-danger, .border-success {
+    border-radius: 10px;
+}
+
+.border-danger {
+    border-color: #ff4444;
+    box-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
+}
+
+.border-success {
+    border-color: #66ff66;
+    box-shadow: 0 0 10px rgba(102, 255, 102, 0.5);
+}
+
+.btn-warning, .btn-outline-success {
+    color: #ffffff;
+    background-color: #ffcc00;
+    border-color: #ffcc00;
+    transition: background-color 0.5s ease;
+}
+
+.btn-outline-success:hover {
+    background-color: #33cc33;
+    border-color: #33cc33;
+}
+
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.btn-floating {
+    color: #ffffff;
+}
+
+.didot {
+    font-family: 'lucida bright';
+}
+
+.input[type="search"] {
+    display: block;
+    color: rgb(34, 34, 34);
+    background: linear-gradient(142.99deg, rgba(217, 217, 217, 0.63) 15.53%, rgba(243, 243, 243, 0.63) 88.19%);
+    box-shadow: 0px 12px 24px -1px rgba(0, 0, 0, 0.18);
+    border-color: rgba(7, 4, 14, 0);
+    block-size: 20px;
+    margin: 7px auto;
+    padding: 18px 15px;
+    outline: none;
+    text-align: center;
+    width: 200px;
+    border-radius: 5px;
+    transition: width 0.5s ease, border-radius 0.5s ease;
+}
+
+.input[type="search"]:hover {
+    /* Cambios al pasar el ratón */
+    width: 240px;
+    border-radius:20px; /* Cambia el valor según tu preferencia */
+}
+
+.input[type="search"]:focus {
+    width: 280px;
+}
+
+.slide-in {
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 767px) {
+    .hechas {
+        margin-top: 5%;
+    }
+    a .nav-link {
+        align-items: center !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+}
+

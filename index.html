@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mx-auto">
+        <div class="container-fluid d-flex justify-content-between align-items-center mx-auto">
+            <a class="navbar-brand fs-4" href="#"> <i class="fa-solid fa-list"></i> To Do List</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#agregarTareaForm">Tasks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#search">Search</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+    <main class="w-75 mx-auto flex-grow-1 mb-5">
+      <div class="container mt-3">
+        <h2 class="text-center"><i class="fa-solid fa-magnifying-glass"></i> Buscador de tareas</h2>
+      <form class="mx-auto text-center" id="buscarForm" onsubmit="buscarTarea(); return false;">
+        <input id="search" type="search" name="text" placeholder="Busca una tarea" class="d-inline-block input form-control me-2">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      </div>
+      
+      <div class="container mt-5">
+        
+          <div class="row justify-content-center">
+              <div class="col-md-5 border border-danger p-3">
+                  <h2><i class="fas fa-clock"></i> Tareas por hacer</h2>
+                  <form id="agregarTareaForm">
+                      <div class="input-group mb-3">
+                          <input type="text" class="form-control" id="nuevaTarea" placeholder="Nueva tarea" >
+                          <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-plus"></i> Agregar</button>
+                      </div>
+                  </form>
+                  <p id="contadorTareas">Tareas pendientes: 0</p>
+                  <ul id="tareasPendientes" class="slide-in">
+                      <!-- Lista de tareas se renderizará aquí -->
+                  </ul>
+              </div>
+              <div class="col-md-5 border border-success ms-md-4 p-3 hechas">
+                  <h2><i class="fas fa-check"></i> Tareas hechas</h2>
+                  <p id="contadorTareasHechas">Tareas hechas: 0</p>
+                  <ul id="tareasHechas" class="slide-in">
+                      <!-- Lista de tareas completadas se renderizará aquí -->
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </main>
+
+
+
+    <footer class="bg-body-tertiary text-center border mt-auto">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+    
+            <!-- Google -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #dd4b39;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #ac2bac;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+      
+            <!-- Linkedin -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #0082ca;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <!-- Github -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #333333;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <div class="text-center p-3 didot" style="background-color: rgba(0, 0, 0, 0.05);">
+          Created with JavaScript - Juan Ignacio Reale - Web designer and developer
+        </div>
+
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+    <script src="toDoList.js"></script>
+
+</body>
+</html>
